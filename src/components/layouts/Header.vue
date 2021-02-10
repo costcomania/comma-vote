@@ -1,18 +1,24 @@
 <template>
-  <div class="header"><span id="title">컴마 투표</span><br /></div>
+  <div class="header">
+    <img id="header-image" src="../../assets/logo.png" />
+  </div>
 </template>
 
 <script>
-export default {};
+import { ref } from "vue";
+const url = ref("../../assets/logo.png");
+
+export default {
+  setup() {
+    const imageUrl = url.value;
+    return {
+      imageUrl,
+    };
+  },
+};
 </script>
 <style scoped>
-#title {
-  font-family: sans-serif;
-  font-weight: 900;
-  background-color: #fa2748;
-  margin: 50px;
-  max-width: 100%;
-  padding: 10px;
-  border-radius: 10px 10px 10px 10px;
+#header-image {
+  width: 10rem;
 }
 </style>

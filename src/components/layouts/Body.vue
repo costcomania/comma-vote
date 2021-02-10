@@ -1,24 +1,15 @@
 <template>
   <div class="body">
     <router-view></router-view>
-    <p id="login-button" @click="next">다음</p>
   </div>
 </template>
 <script>
 import Login from "../views/Login.vue";
-var id = 1;
 
 export default {
   name: "Body",
   component: {
     Login,
-  },
-  methods: {
-    next() {
-      console.log("next");
-      this.$router.push("/vote/" + id);
-      id += 1;
-    },
   },
   setup() {
     return {};
@@ -49,5 +40,7 @@ a:visited {
 }
 a:hover {
   text-decoration: none;
+}
+.button-next {
 }
 </style>

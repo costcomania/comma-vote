@@ -29,7 +29,6 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #aaaaff;
   padding: 100px 0px 100px 0px;
 }
 </style>
