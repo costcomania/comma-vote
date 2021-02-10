@@ -38,6 +38,7 @@
 <script>
 import { ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
+import { useStore } from "vuex";
 
 export default {
   name: "Login",
@@ -52,6 +53,7 @@ export default {
     const username = ref("");
     const router = useRouter();
     const route = useRoute();
+    const store = useStore();
     const submit = () => {
       if (
         studentId.value == "" ||
@@ -59,6 +61,7 @@ export default {
         username.value == ""
       ) {
         console.log("fail");
+        console.log(store.state.studentId);
         alert("값을 전부 입력해주세요.");
       } else {
         console.log("success");
@@ -67,12 +70,13 @@ export default {
     };
 
     return {
+      router,
+      route,
       studentId,
       clubname,
       username,
       submit,
-      router,
-      route,
+      store,
     };
   },
 };
