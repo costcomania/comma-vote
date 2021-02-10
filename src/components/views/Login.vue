@@ -62,7 +62,7 @@ export default {
         alert("값을 전부 입력해주세요.");
       } else {
         console.log("success");
-        router.push("/vote/1");
+        router.push("/comma-vote/vote/1");
       }
     };
 

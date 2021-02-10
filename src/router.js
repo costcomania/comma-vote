@@ -11,17 +11,17 @@ const routes = [
         component: Login,
     },
     {
-        path: '/vote/:id',
+        path: '/comma-vote/vote/:id',
         name: 'vote',
         component: Vote,
     },
     {
-        path: '/end',
+        path: '/comma-vote/end',
         name: 'end',
         component: End,
     },
     {
-        path: '/:catchAll(.*)',
+        path: '/comma-vote/:catchAll(.*)',
         component: NotFound,
     }
 ]
